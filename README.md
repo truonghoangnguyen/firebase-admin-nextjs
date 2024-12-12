@@ -57,6 +57,18 @@ src/
     └── firebase.ts      # Firebase configuration and initialization
 ```
 
+## Why This Project?
+
+I set out to build a SaaS system with user profiles as quickly and efficiently as possible. After exploring Supabase, I found its complexity a bit overwhelming for my needs. That's when I discovered Firebase - a solution that provides just the right balance of simplicity and functionality to get started.
+
+As Einstein wisely said: "Everything should be made as simple as possible, but not simpler."
+
+This project embodies that philosophy by:
+- Prioritizing simplicity without sacrificing essential features
+- Providing a straightforward authentication system
+- Offering easy-to-implement user profile management
+- Maintaining scalability for future growth
+
 ## Features
 
 ### Authentication
