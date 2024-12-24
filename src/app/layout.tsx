@@ -1,9 +1,15 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { AuthProvider } from '@/context/AuthContext'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#EC4899', // Pink-600 from Tailwind
+}
 
 export const metadata: Metadata = {
   title: 'Pink Keto - AI-Powered Document Scanner',
@@ -25,11 +31,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
-  themeColor: '#EC4899', // Pink-600 from Tailwind
 }
 
 export default function RootLayout({
@@ -39,10 +40,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#EC4899" />
-      </head>
       <body className={inter.className}>
         <AuthProvider>
           {children}

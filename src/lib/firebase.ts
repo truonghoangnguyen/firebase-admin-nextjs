@@ -21,21 +21,7 @@ const db = getFirestore(app);
 const storage = getStorage(app);
 
 // Connect to Firebase emulators in development
-// if (process.env.NODE_ENV === 'development') {
-//   const { connectAuthEmulator } = require('firebase/auth');
-//   const { connectFirestoreEmulator } = require('firebase/firestore');
-//   const { connectStorageEmulator } = require('firebase/storage');
-  
-//   connectAuthEmulator(auth, 'http://127.0.0.1:9099');
-//   connectFirestoreEmulator(db, '127.0.0.1', 8080);
-//   connectStorageEmulator(storage, '127.0.0.1', 9199);
-  
-//   console.log('Firebase emulators connected');
-// }
-// else {
-//   console.log('Firebase emulators not connected');
-// }
-// Connect to Firebase emulators in development
+// process.env.NODE_ENV === 'development' is set by npm run dev
 if (process.env.NODE_ENV === 'development') {
   connectAuthEmulator(auth, 'http://127.0.0.1:9099');
   connectFirestoreEmulator(db, '127.0.0.1', 8080);
